@@ -1,0 +1,95 @@
+<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorGris">
+
+
+    <TextView
+        android:id="@+id/twIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/news_cycle_bold"
+        android:text="Iniciar Sesión"
+        android:textColor="@color/colorCafe"
+        android:textSize="28dp" />
+
+    <TextView
+        android:id="@+id/twAdvertencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/twIniciarSesion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/scada_bold"
+        android:text=""
+        android:textColor="@color/colorRojo"
+        android:textSize="15dp" />
+
+
+    <ImageView
+        android:id="@+id/ivImagen"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/casita"
+        />
+
+
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de usuario"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ivImagen"
+            android:layout_marginTop="25dp"
+            android:textColorHint="#000"
+            android:textColor="#000"
+            android:background="@color/colorBlanco"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/etContraseña"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/etNombre"
+            android:layout_marginTop="25dp"
+            android:textColorHint="#000"
+            android:textColor="#000"
+            android:background="@color/colorBlanco"
+            android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etContraseña"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:background="@color/colorPiel"
+        android:textColor="#000"
+        android:text="Ingresar" />
+
+    <Button
+        android:id="@+id/btnRegistrarse"
+        android:layout_width="248dp"
+        android:layout_height="42dp"
+        android:layout_below="@+id/btnIngresar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bordes"
+        android:fontFamily="@font/bubbler_one"
+        android:text="¿No tienes cuenta? Crea una ahora"
+        android:textColor="@color/colorCafe"
+        android:textSize="15dp"
+
+        />
+
+
+</RelativeLayout>

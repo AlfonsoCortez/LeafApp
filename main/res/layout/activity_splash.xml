@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff">
+
+
+    <TextView
+        android:id="@+id/mensajeInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/bubbler_one"
+        android:layout_marginTop="150dp"
+        android:text="BIENVENIDO"
+        android:textColor="@color/colorCafe"
+        android:textSize="55dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mensajeInicial"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="cursive"
+        android:text="By Alfonso Chavarro"
+        android:textColor="@color/colorCafe"
+        android:textSize="15dp" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="407dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-70dp"
+        android:src="@drawable/fondocompleto1" />
+
+
+</RelativeLayout>
