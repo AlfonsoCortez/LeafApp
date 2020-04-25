@@ -16,25 +16,50 @@
         android:textSize="30dp" />
 
     <TextView
-        android:layout_below="@+id/twMensajeBienvenida"
-        android:layout_width="wrap_content"
+        android:id="@+id/men"
+        android:layout_width="356dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/twMensajeBienvenida"
         android:layout_marginLeft="40dp"
 
         android:fontFamily="@font/bubbler_one"
-        android:textColor="#000"
         android:text="El codigo de la app se encuentra en el repositorio:"
+        android:textColor="#000"
         android:textSize="20dp" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/men"
+        android:layout_marginTop="20dp"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
 
+            <TextView
+                android:id="@+id/Cont2"
+                android:layout_width="351dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+
+                android:fontFamily="@font/bubbler_one"
+                android:text="Backend: Nodejs. \n App nativa elaborada en Java \n Bases de datos remota de mysql \n \n Codigo del proyecto:"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/btnGithub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Cont2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorBlanco"
+                android:onClick="btnGithub"
+                android:src="@drawable/github" />
 
         </RelativeLayout>
 

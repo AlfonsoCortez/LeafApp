@@ -50,7 +50,18 @@ public class login extends AppCompatActivity {
 		btnIngresar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				obtenerDatos(etNombre.getText().toString(),etContraseña.getText().toString());
+
+				String name =  etNombre.getText().toString();
+				String pass = etContraseña.getText().toString();
+
+				if((name != null) && (!name.equals("")) && (pass != null) && (!pass.equals(""))){
+					Log.i("Usuario valido: ", name);
+					Log.i("Contraseña valido: ", pass);
+					obtenerDatos(name, pass);
+				}else{
+					Toast.makeText(getApplicationContext(), "Algun campo esta vacio o un campo con un dato invalido", Toast.LENGTH_SHORT).show();
+				}
+				//obtenerDatos(etNombre.getText().toString(),etContraseña.getText().toString());
 			}
 		});
 
@@ -84,22 +95,16 @@ public class login extends AppCompatActivity {
 					Log.i("Nombre del res ", nombreRes);
 					Log.i("Contraseña del res ", contraseñaRes);
 
-					if(nombreRes.equals(nombreInp) && contraseñaRes.equals(contraseñaInp)){
-						Intent irHome = new Intent(login.this,Home.class);
-						Bundle datosHome = new Bundle();
 
-						/*datosHome.putString("Nombre", nombreRes);
-						datosHome.putString("Contraseña", contraseñaRes);*/
-						datosHome.putString("IdUsuario", id_usuario);
+					Intent irHome = new Intent(login.this,Home.class);
+					Bundle datosHome = new Bundle();
 
-						Log.i("Punto 1", "Llegamos al 1");
+					datosHome.putString("IdUsuario", id_usuario);
 
-						irHome.putExtras(datosHome);
-						startActivity(irHome);
-					}else{
-						twAdvertencia.setText("Los datos ingresados no son correctos.");
-					}
+					Log.i("Punto 1", "Llegamos al 1");
 
+					irHome.putExtras(datosHome);
+					 startActivity(irHome);
 
 				}catch(Exception error){
 					Log.i("Mensaje de Error: ", ""+error);

@@ -69,8 +69,21 @@ public class AnadirHojas extends AppCompatActivity {
 				Input6Value = Input6.getText().toString();
 				Input7Value = Input7.getText().toString();
 
+
+
+
 				//if(Input1Value == "" && Input2Value == "" && Input3Value == "" && Input4Value == "" && Input5Value == "" && Input6Value == "" && Input7Value == "" ){
-					guardarLosDatos(idUser,Input2Value,Input3Value,Input4Value,Input5Value,Input6Value,Input7Value);
+
+				//if((Input2Value != null) && (!Input2Value.equals("")) && (Input3Value != null) && (!Input3Value.equals("")) && (Input4Value != null) && (!Input4Value.equals("")) && (Input5Value != null) && (!Input5Value.equals("")) && (Input6Value != null) && (!Input6Value.equals("")) ){
+					if(esNumero(Input7Value) && Input7Value != null){
+						guardarLosDatos(idUser, Input2Value, Input3Value, Input4Value, Input5Value, Input6Value, Input7Value);
+					}else{
+						Toast.makeText(getApplicationContext(), "Ingreso un dato invalido", Toast.LENGTH_SHORT).show();
+					}
+				/*}else {
+					Toast.makeText(getApplicationContext(), "Algun campo esta vacio", Toast.LENGTH_SHORT).show();
+				}*/
+
 				/*}else{
 					Toast.makeText(getApplicationContext(), "Algun campo esta vacio.", Toast.LENGTH_SHORT).show();
 				}*/
@@ -118,6 +131,20 @@ public class AnadirHojas extends AppCompatActivity {
 		});
 
 		queue.add(peticion);
+	}
+
+	public static boolean esNumero(String cadena) {
+
+		boolean resultado;
+
+		try {
+			Integer.parseInt(cadena);
+			resultado = true;
+		} catch (NumberFormatException excepcion) {
+			resultado = false;
+		}
+
+		return resultado;
 	}
 
 }

@@ -10,7 +10,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:fontFamily="@font/news_cycle_bold"
-        android:text="Crear cuenta"
+        android:text="Crear tu cuenta"
         android:textColor="@color/colorCafe"
         android:textSize="28dp" />
 

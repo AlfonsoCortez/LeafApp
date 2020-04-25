@@ -1,5 +1,7 @@
 package com.gooaming.parcial;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -51,11 +53,19 @@ public class MainActivity extends AppCompatActivity {
 
 	}
 
-	public void mensajeAñadir(View View){
-		Toast.makeText(getApplicationContext(), "Añadirr", Toast.LENGTH_LONG).show();
+	public void btnVisitarPag(View View){
+
+		String URL = "http://leaafapp.herokuapp.com/";
+		Uri uri = Uri.parse(URL);
+		Intent inte = new Intent(Intent.ACTION_VIEW, uri);
+		startActivity(inte);
 	}
 
-	public void mensajeVerHojas(View View){
-		Toast.makeText(getApplicationContext(), "Ver tus hojas", Toast.LENGTH_LONG).show();
+	public void btnGithub(View View){
+
+		String URL = "https://github.com/AlfonsoCortez/LeafApp";
+		Uri uri = Uri.parse(URL);
+		Intent inte = new Intent(Intent.ACTION_VIEW, uri);
+		startActivity(inte);;
 	}
 }

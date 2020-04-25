@@ -2,39 +2,110 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorBlanco">
 
-
-    <TextView
-        android:id="@+id/twMensajeBienvenida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp"
-
-        android:fontFamily="@font/scada_bold"
-        android:text="Información de la app"
-        android:textColor="#000"
-        android:textSize="30dp" />
-
-    <TextView
-        android:layout_below="@+id/twMensajeBienvenida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-
-        android:fontFamily="@font/bubbler_one"
-        android:textColor="#000"
-        android:text="Informacion basica de la app"
-        android:textSize="20dp" />
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
 
+               <TextView
+                    android:id="@+id/twMensajeBienvenida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+
+                    android:fontFamily="@font/news_cycle_bold"
+                    android:text="Información de la app"
+                    android:textColor="#000"
+                    android:textSize="32dp"
+                   />
+
+                <TextView
+                    android:id="@+id/subMensaje"
+                    android:layout_below="@+id/twMensajeBienvenida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/bubbler_one"
+                    android:textColor="#000"
+                    android:text="Informacion del desarrollo de la app"
+                    android:textSize="20dp"
+                />
+
+
+
+                <TextView
+                    android:id="@+id/twCont1"
+                    android:layout_width="342dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/bubbler_one"
+                    android:layout_marginTop="20dp"
+                    android:text="La aplicación se desarrollo paralelamente al desarrollo de una API REST elaborada en Nodejs, la cual se aloja en Heroku que a su vez, esta conectada con una base de datos remota de mysql. El backend, la app y la base de datos fue desarrollada por Alfonso Chavarro."
+                    android:textColor="#000"
+                    android:textSize="17dp"
+                    android:layout_below="@+id/subMensaje"
+                />
+
+                <TextView
+                    android:id="@+id/twCont2"
+                    android:layout_width="342dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/bubbler_one"
+                    android:text="Peticiones GET que la app hace a la API:"
+                    android:textColor="#000"
+                    android:layout_marginTop="20dp"
+                    android:textSize="17dp"
+                    android:layout_below="@+id/twCont1"
+                    />
+                <!-- http://leaafapp.herokuapp.com/api/usuarios/formulario -->
+
+                <TextView
+                    android:id="@+id/twCont3"
+                    android:layout_width="342dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/bubbler_one"
+                    android:text="http://leaafapp.herokuapp.com/api/usuarios/formulario \n http://leaafapp.herokuapp.com/api/usuarios/mostrar/formulario  \n http://leaafapp.herokuapp.com/api/usuarios/register  \n http://leaafapp.herokuapp.com/api/usuarios \n \n Ejemplo: \n \n http://leaafapp.herokuapp.com/api/usuarios/mostrar/formulario?id=1"
+                    android:textColor="#000"
+                    android:layout_marginTop="20dp"
+                    android:textSize="17dp"
+                    android:layout_below="@+id/twCont2"
+                    />
+
+                <TextView
+                    android:id="@+id/twCont4"
+                    android:layout_width="342dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/bubbler_one"
+                    android:text="Puede visitar la pagina donde se aloja el backend de la app acá:"
+                    android:textColor="#000"
+                    android:layout_marginTop="20dp"
+                    android:textSize="17dp"
+                    android:layout_below="@+id/twCont3"
+                    />
+
+
+                <Button
+                    android:id="@+id/btnVisitarPag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/twCont4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorAzul"
+                    android:onClick="btnVisitarPag"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Pagina Laef"
+                    android:layout_marginBottom="30dp"/>
 
         </RelativeLayout>
 
