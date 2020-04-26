@@ -107,6 +107,8 @@
                     android:id="@+id/Input2"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColorHint="#000"
                     android:background="@color/colorBlanco"
                     android:hint="Ingresa tu descripción personal"
                     android:padding="14sp"
@@ -137,6 +139,9 @@
                     android:textColor="#000"
                     android:layout_marginTop="10dp"
                     android:layout_below="@+id/label3"
+
+                    android:inputType="text"
+                    android:textColorHint="#000"
                     />
                 <!--///////////////////////////////////////////////////////////////-->
                 <TextView
@@ -161,6 +166,9 @@
                     android:textColor="#000"
                     android:layout_marginTop="10dp"
                     android:layout_below="@+id/label4"
+
+                    android:inputType="text"
+                    android:textColorHint="#000"
                     />
                 <!--///////////////////////////////////////////////////////////////-->
                 <TextView
@@ -181,7 +189,9 @@
                     android:padding="14sp"
                     android:layout_marginTop="10dp"
                     android:background="#000"
-                    android:layout_below="@+id/label5"/>
+                    android:layout_below="@+id/label5"
+
+                    />
 
                 <!--///////////////////////////////////////////////////////////////-->
                 <TextView
@@ -206,6 +216,9 @@
                     android:textColor="#000"
                     android:layout_marginTop="10dp"
                     android:layout_below="@+id/label6"
+
+                    android:inputType="text"
+                    android:textColorHint="#000"
                     />
                 <!--///////////////////////////////////////////////////////////////-->
                 <TextView
@@ -230,6 +243,9 @@
                     android:textColor="#000"
                     android:layout_marginTop="10dp"
                     android:layout_below="@+id/label7"
+
+                    android:inputType="text"
+                    android:textColorHint="#000"
                     />
 
                 <Button
@@ -245,6 +261,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
+                    android:inputType="number"
                     />
 
             </RelativeLayout>

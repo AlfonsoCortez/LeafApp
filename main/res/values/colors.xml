@@ -13,4 +13,6 @@
     <color name="colorRojo">#d63031</color>
     <color name="colorAzul">#00a8ff</color>
     <color name="colorVerde">#4cd137</color>
+
+    <color name="colorGrisFondo">#EEEEEE</color>
 </resources>

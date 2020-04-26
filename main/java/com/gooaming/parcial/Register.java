@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +23,7 @@ import org.json.JSONObject;
 
 public class Register extends AppCompatActivity {
 
-	private Button btnIniciarSesion, btnRegistrarse;
+	private ImageButton btnIniciarSesion, btnRegistrarse;
 	private TextView twAdvertencia;
 	private EditText etNombre, etContraseña;
 	private RequestQueue queue;
@@ -36,22 +37,26 @@ public class Register extends AppCompatActivity {
 
 		etNombre = (EditText)findViewById(R.id.etNombre);
 		etContraseña = (EditText)findViewById(R.id.etContraseña);
-		twAdvertencia = (TextView)findViewById(R.id.twAdvertencia);
+		//twAdvertencia = (TextView)findViewById(R.id.twAdvertencia);
 
-		btnIniciarSesion = (Button)findViewById(R.id.btnIniciarSesion);
-		btnRegistrarse = (Button)findViewById(R.id.btnRegistrarse);
+		btnIniciarSesion = (ImageButton)findViewById(R.id.btnIniciarSesion);
+		btnRegistrarse = (ImageButton)findViewById(R.id.btnRegistrarse);
 
 		queue = Volley.newRequestQueue(this);
 
 		btnRegistrarse.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+
 				Log.i("Usuario: ", etNombre.getText().toString());
 				Log.i("Contraseña: ", etContraseña.getText().toString());
 
 
 				String name =  etNombre.getText().toString();
 				String pass = etContraseña.getText().toString();
+
+
+
 
 				if((name != null) && (!name.equals("")) && (pass != null) && (!pass.equals(""))){
 					Log.i("Usuario valido: ", name);
@@ -91,8 +96,8 @@ public class Register extends AppCompatActivity {
 			@Override
 			public void onResponse(JSONObject response) {
 				try{
-
-					Intent irHome2 = new Intent(Register.this,Home.class);
+					Toast.makeText(getApplicationContext(), "Cuenta creada", Toast.LENGTH_SHORT).show();
+					Intent irHome2 = new Intent(Register.this,login.class);
 					startActivity(irHome2);
 
 				}catch(Exception error){
@@ -104,7 +109,7 @@ public class Register extends AppCompatActivity {
 			@Override
 			public void onErrorResponse(VolleyError error) {
 				Log.i("Mensaje de Error2: ", ""+error);
-				Toast.makeText(getApplicationContext(), "Ocurrio un error con la API", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), "Error en la conexión", Toast.LENGTH_SHORT).show();;
 			}
 		});
 

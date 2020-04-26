@@ -1,43 +1,51 @@
 <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:background="@color/colorBlanco">
+    android:background="@color/colorGrisFondo">
 
-
-    <TextView
-        android:id="@+id/twIniciarSesion"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/contenedor"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/news_cycle_bold"
-        android:text="Iniciar Sesión"
-        android:textColor="@color/colorCafe"
-        android:textSize="28dp" />
+        android:background="@color/colorBlanco"
+        android:padding="10dp"
+        >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/news_cycle_bold"
+            android:text="INICIAR SESION"
+            android:textColor="#000"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+<!--
     <TextView
         android:id="@+id/twAdvertencia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/twIniciarSesion"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/scada_bold"
         android:text=""
         android:textColor="@color/colorRojo"
-        android:textSize="15dp" />
-
+        android:textSize="15dp"
+        />
+-->
 
     <ImageView
         android:id="@+id/ivImagen"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"
+        android:layout_below="@+id/contenedor"
+        android:layout_marginTop="20dp"
         android:src="@drawable/casita2"
         />
-
-
 
         <EditText
             android:id="@+id/etNombre"
@@ -51,6 +59,7 @@
             android:textColor="#000"
             android:background="@color/colorGris"
             android:padding="10dp"
+            android:inputType="text"
             />
 
         <EditText
@@ -63,29 +72,30 @@
             android:layout_marginTop="25dp"
             android:textColorHint="#000"
             android:textColor="#000"
-
+            android:inputType="textPassword"
             android:background="@color/colorGris"
             android:padding="10dp"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/btnIngresar"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etContraseña"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
-        android:background="@color/colorPiel"
+        android:background="@drawable/btniniciar"
         android:textColor="#000"
-        android:text="Ingresar" />
+        android:text="Ingresar"
 
-    <Button
+        />
+
+    <ImageButton
         android:id="@+id/btnRegistrarse"
-        android:layout_width="248dp"
-        android:layout_height="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/btnIngresar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bordes"
+        android:background="@drawable/btncrear"
         android:fontFamily="@font/bubbler_one"
         android:text="¿No tienes cuenta? Crea una ahora"
         android:textColor="@color/colorCafe"

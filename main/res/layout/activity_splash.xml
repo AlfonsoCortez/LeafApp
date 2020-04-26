@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/bubbler_one"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="90dp"
         android:text="BIENVENIDO"
         android:textColor="@color/colorCafe"
         android:textSize="20dp" />
@@ -28,16 +28,15 @@
         android:typeface="normal" />
 
     <TextView
-        android:layout_width="260dp"
+        android:layout_width="336dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/twTexto1"
         android:layout_centerHorizontal="true"
-        android:textAlignment="center"
         android:fontFamily="@font/bubbler_one"
         android:text="Si ocurre un error, se recomienda probar la app en diferentes dispositivos."
+        android:textAlignment="center"
         android:textColor="@color/colorCafe"
-        android:textSize="20dp"
-        />
+        android:textSize="20dp" />
 
 
     <ImageView

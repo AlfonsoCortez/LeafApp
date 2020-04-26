@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,10 +25,11 @@ import org.json.JSONObject;
 
 public class login extends AppCompatActivity {
 
-	private Button btnIngresar, btnRegistrarse;
+	//private Button btnIngresar, btnRegistrarse;
 	private RequestQueue queue;
 	private EditText etNombre, etContraseña;
-	private TextView twAdvertencia;
+	//private TextView twAdvertencia;
+	private ImageButton btnIngresar, btnRegistrarse;
 
 
 	@Override
@@ -38,10 +40,10 @@ public class login extends AppCompatActivity {
 
 		etNombre = (EditText)findViewById(R.id.etNombre);
 		etContraseña = (EditText)findViewById(R.id.etContraseña);
-		twAdvertencia = (TextView)findViewById(R.id.twAdvertencia);
+		//twAdvertencia = (TextView)findViewById(R.id.twAdvertencia);
 
-		btnIngresar = (Button)findViewById(R.id.btnIngresar);
-		btnRegistrarse = (Button)findViewById(R.id.btnRegistrarse);
+		btnIngresar = (ImageButton)findViewById(R.id.btnIngresar);
+		btnRegistrarse = (ImageButton)findViewById(R.id.btnRegistrarse);
 
 		queue = Volley.newRequestQueue(this);
 
@@ -51,7 +53,7 @@ public class login extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 
-				String name =  etNombre.getText().toString();
+				String name = etNombre.getText().toString();
 				String pass = etContraseña.getText().toString();
 
 				if((name != null) && (!name.equals("")) && (pass != null) && (!pass.equals(""))){
@@ -80,7 +82,7 @@ public class login extends AppCompatActivity {
 	private void obtenerDatos(final String nombre, final String contraseña){
 		final String nombreInp = nombre;
 		final String contraseñaInp = contraseña;
-		//String url = "http://localhost:3000/api/usuarios/" + nombre;
+
 		String url2 = "http://leaafapp.herokuapp.com/api/usuarios?nombre=" + nombre + "&contraseña=" + contraseña;
 		Log.i("url:", url2);
 
@@ -104,7 +106,7 @@ public class login extends AppCompatActivity {
 					Log.i("Punto 1", "Llegamos al 1");
 
 					irHome.putExtras(datosHome);
-					 startActivity(irHome);
+					startActivity(irHome);
 
 				}catch(Exception error){
 					Log.i("Mensaje de Error: ", ""+error);
@@ -114,7 +116,9 @@ public class login extends AppCompatActivity {
 		}, new Response.ErrorListener() {
 			@Override
 			public void onErrorResponse(VolleyError error) {
+				Toast.makeText(getApplicationContext(), "Error en la conexión", Toast.LENGTH_SHORT).show();
 				Log.i("Mensaje de Error2: ", ""+error);
+
 			}
 		});
 
