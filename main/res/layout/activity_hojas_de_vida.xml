@@ -1,3 +1,40 @@
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlanco">
+        <TextView
+            android:id="@+id/mensajeI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contenedor"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/scada_bold"
+            android:text="Tus hojas de vida registradas:"
+            android:textColor="#000"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rwContenedor"
+            android:background="@color/colorNegro"
+
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mensajeI"
+
+            />
+    </RelativeLayout>
+</LinearLayout>
+
+<!--
 <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorGris"
@@ -20,37 +57,50 @@
             android:fontFamily="@font/bubbler_one"
             android:text="Leaf app"
             android:textColor="#000"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            />
 
     </RelativeLayout>
-<!--
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/contenedor"
-        >-->
-    <TextView
-        android:id="@+id/mensajeI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/contenedor"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/scada_bold"
-        android:text="Tus hojas de vida registradas:"
-        android:textColor="#000"
-        android:layout_marginBottom="10dp"
-        android:textSize="20dp" />
+        >
+<TextView
+android:id="@+id/mensajeI"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@+id/contenedor"
+android:layout_marginLeft="20dp"
+android:layout_marginTop="10dp"
+android:fontFamily="@font/scada_bold"
+android:text="Tus hojas de vida registradas:"
+android:textColor="#000"
+android:layout_marginBottom="10dp"
+android:textSize="20dp" />
 
-            <ListView
+
+
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/rwContenedor"
+
+android:scrollbars="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_below="@+id/mensajeI"
+    />
+    <ListView
                 android:id="@+id/lwHojasDeVida"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
                 android:cacheColorHint="@color/colorBlanco"
                 android:layout_below="@+id/mensajeI"
-               />
+               />-->
 
-   <!-- </ScrollView>-->
+    <!-- </ScrollView>-->
+<!--
+    </RelativeLayout>
 
-</RelativeLayout>
+-->

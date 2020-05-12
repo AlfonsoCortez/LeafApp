@@ -1,0 +1,26 @@
+<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorGris">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorNegro"
+        />
+
+    <TextView
+        android:id="@+id/mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="asdas"
+        android:textColor="@color/colorNegro"
+        android:layout_below="@+id/titulo"
+        />
+
+
+</RelativeLayout>
