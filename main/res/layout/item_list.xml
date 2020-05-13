@@ -12,22 +12,32 @@
         android:layout_marginTop="20dp"
         />
 
-    <Button
-        android:id="@+id/btnEliminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Eliminar"
-        android:layout_below="@+id/idDato"/>
-
-    <Button
-        android:id="@+id/btnActualizar"
-        android:layout_width="123dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/idDato"
-        android:layout_alignEnd="@+id/btnEliminar"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="-147dp"
-        android:layout_toEndOf="@+id/btnEliminar"
-        android:text="Actualizar" />
+
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRojo"
+            android:text="Eliminar"
+            android:textColor="@color/colorBlanco" />
+
+        <Button
+            android:id="@+id/btnActualizar"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnEliminar"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-49dp"
+            android:layout_marginEnd="149dp"
+            android:text="Modificar"
+            android:background="@color/colorBlanco"
+            android:textColor="@color/colorAzul"/>
+    </RelativeLayout>
 </RelativeLayout>

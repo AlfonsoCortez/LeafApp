@@ -2,25 +2,264 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorGris">
 
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Actualizar"
-        android:textSize="25dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/colorNegro"
-        />
-
-    <TextView
-        android:id="@+id/mensaje"
+    <RelativeLayout
+        android:id="@+id/contenedor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="asdas"
-        android:textColor="@color/colorNegro"
-        android:layout_below="@+id/titulo"
-        />
+        android:background="@color/colorBlanco"
+        android:padding="10dp"
+        >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/bubbler_one"
+            android:text="Leaf app"
+            android:textColor="#000"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contenedor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            >
+
+            <TextView
+                android:id="@+id/twMensajeBienvenida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/scada_bold"
+                android:text="Edita tu hoja de vida"
+                android:textColor="#000"
+                android:textSize="30dp"
+                />
+
+            <TextView
+                android:id="@+id/mensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+
+                android:fontFamily="@font/bubbler_one"
+                android:textColor="#000"
+                android:text="..."
+                android:layout_centerHorizontal="true"
+
+                android:textSize="28dp"
+                android:layout_below="@+id/twMensajeBienvenida"
+                />
+
+            <TextView
+                android:id="@+id/twMensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+
+                android:fontFamily="@font/bubbler_one"
+                android:textColor="#000"
+                android:text="Rellena todos los campos con tu informacion personal actualizada."
+                android:textSize="20dp"
+                android:layout_below="@+id/mensaje"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/twMensaje"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/labelDos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa tu descripción personal"
+
+                    android:textColor="#000"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/Input2"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColorHint="#000"
+                    android:background="@color/colorBlanco"
+                    android:hint="Ingresa tu descripción personal"
+                    android:padding="14sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/labelDos"
+                    />
+                <!--///////////////////////////////////////////////////////////////-->
+                <TextView
+                    android:id="@+id/label3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa tu fecha de nacimiento"
+                    android:layout_below="@+id/Input2"
+
+                    android:textColor="#000"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/Input3"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlanco"
+                    android:hint="Ingresa tu fecha de nacimiento"
+                    android:padding="14sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/label3"
+
+                    android:inputType="text"
+                    android:textColorHint="#000"
+                    />
+                <!--///////////////////////////////////////////////////////////////-->
+                <TextView
+                    android:id="@+id/label4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa tu lugar de nacimiento"
+                    android:layout_below="@+id/Input3"
+
+                    android:textColor="#000"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/Input4"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlanco"
+                    android:hint="Ingresa tu lugar de nacimiento"
+                    android:padding="14sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/label4"
+
+                    android:inputType="text"
+                    android:textColorHint="#000"
+                    />
+                <!--///////////////////////////////////////////////////////////////-->
+                <TextView
+                    android:id="@+id/label5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa tu estado civil"
+                    android:layout_below="@+id/Input4"
+
+                    android:textColor="#000"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <Spinner
+                    android:id="@+id/Input5"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:padding="14sp"
+                    android:layout_marginTop="10dp"
+                    android:background="#000"
+                    android:layout_below="@+id/label5"
+
+                    />
+
+                <!--///////////////////////////////////////////////////////////////-->
+                <TextView
+                    android:id="@+id/label6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa tu dirección"
+                    android:layout_below="@+id/Input5"
+
+                    android:textColor="#000"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/Input6"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlanco"
+                    android:hint="Ingresa tu dirección"
+                    android:padding="14sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/label6"
+
+                    android:inputType="text"
+                    android:textColorHint="#000"
+                    />
+                <!--///////////////////////////////////////////////////////////////-->
+                <TextView
+                    android:id="@+id/label7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa tu numero telefonico"
+                    android:layout_below="@+id/Input6"
+
+                    android:textColor="#000"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/Input7"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlanco"
+                    android:hint="Ingresa tu numero telefonico"
+                    android:padding="14sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/label7"
+
+                    android:inputType="text"
+                    android:textColorHint="#000"
+                    />
+
+                <Button
+                    android:id="@+id/btnActualizarHoja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Input7"
+                    android:text="Actualizar hoja de vida"
+                    android:background="@color/colorAzul"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:inputType="number"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
