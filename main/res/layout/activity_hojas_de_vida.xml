@@ -1,24 +1,27 @@
-<LinearLayout android:layout_width="wrap_content"
+<RelativeLayout android:layout_width="wrap_content"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-   >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBlanco">
+
         <TextView
             android:id="@+id/mensajeI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/contenedor"
+
+            android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/scada_bold"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/news_cycle_bold"
             android:text="Tus hojas de vida registradas:"
             android:textColor="#000"
-            android:layout_marginBottom="10dp"
             android:textSize="20dp" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -32,9 +35,15 @@
 
             />
     </RelativeLayout>
-</LinearLayout>
+
+
+
+</RelativeLayout>
 
 <!--
+
+       app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/drawer_header"
 <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorGris"

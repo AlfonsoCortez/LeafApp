@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Principal">
+        <menu>
+            <item android:id="@+id/itHome"
+                android:title="Inicio"></item>
+
+            <item android:id="@+id/itPaginaWeb"
+                android:title="Pagina web"></item>
+
+            <item android:id="@+id/itVerCodigo"
+                android:title="Codigo Fuente"></item>
+        </menu>
+
+
+    </item>}
+    <item android:title="Secundario">
+        <menu>
+            <item android:id="@+id/itInformacion"
+                android:title="Informacion App"></item>
+
+        </menu>
+
+
+    </item>
+</menu>

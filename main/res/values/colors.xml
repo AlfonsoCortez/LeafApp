@@ -16,4 +16,6 @@
 
     <color name="colorGrisFondo">#EEEEEE</color>
     <color name="colorNegro">#000000</color>
+    <color name="colorVerde2">#55efc4</color>
+    <color name="colorGris3">#2f3640</color>
 </resources>

@@ -66,6 +66,6 @@ public class MainActivity extends AppCompatActivity {
 		String URL = "https://github.com/AlfonsoCortez/LeafApp";
 		Uri uri = Uri.parse(URL);
 		Intent inte = new Intent(Intent.ACTION_VIEW, uri);
-		startActivity(inte);;
+		startActivity(inte);
 	}
 }
